@@ -1,8 +1,9 @@
+from pickle import load
 from PIL import Image
 import numpy as np
-import sys, os
-sys.path.append(os.pardir)
-from dataset.mnist import load_mnist
+import os, sys
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/dataset')
+from mnist import load_mnist
 
 (x_train, t_train),(x_test, t_test) = load_mnist(flatten= True, normalize = False)
 

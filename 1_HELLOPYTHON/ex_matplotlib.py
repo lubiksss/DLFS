@@ -1,6 +1,9 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.image import imread
+import os
+
+base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # x = np.arange(0,6,0.1)
 # y1 = np.sin(x)
@@ -14,6 +17,6 @@ from matplotlib.image import imread
 # plt.legend()
 # plt.show()
 
-img = imread('../data/lenna.png')
+img = imread(base_dir+'/data/lenna.png')
 plt.imshow(img)
 plt.show()

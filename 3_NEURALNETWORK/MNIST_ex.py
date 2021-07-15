@@ -3,9 +3,11 @@ import numpy as np
 import sys,os
 import pickle
 import time
-sys.path.append(os.pardir)
-from lib.activation_function import *
-from dataset.mnist import load_mnist
+print(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/lib')
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))+'/dataset')
+from activation_function import *
+from mnist import load_mnist
 
 def get_data():
     (x_train, t_train), (x_test, t_test) = load_mnist(
@@ -14,7 +16,7 @@ def get_data():
 
 
 def init_network():
-    with open('sample_weight.pkl', 'rb') as f:
+    with open('3_NEURALNETWORK/sample_weight.pkl', 'rb') as f:
         network = pickle.load(f)
 
     return network
