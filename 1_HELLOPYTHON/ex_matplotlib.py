@@ -17,6 +17,6 @@ base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # plt.legend()
 # plt.show()
 
-img = imread(base_dir+'/data/lenna.png')
+img = imread(base_dir+'../data/lenna.png')
 plt.imshow(img)
 plt.show()
